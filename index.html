@@ -16,6 +16,7 @@
             <a href="#builder">Builder</a>
             <a href="#footer">About</a>
         </nav>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">🌙</button>
     </header>
 
     <main>
@@ -83,6 +84,10 @@
                     <div class="summary-row">SSD: <span id="summary-ssd">—</span></div>
                     <div class="summary-row">PSU: <span id="summary-psu">—</span></div>
                 </div>
+                <div class="save-buttons">
+                    <button class="save-build-button" id="save-build-button">💾 Save Build</button>
+                    <button class="clear-build-button" id="clear-build-button">🗑️ Clear</button>
+                </div>
             </div>
 
             <div class="result-card compatibility-card">
@@ -105,10 +110,22 @@
     <div class="modal" id="modal">
         <div class="modal-content">
             <h2 class="modal-title" id="modal-title">Choose Component</h2>
+            <div class="modal-controls">
+                <input type="text" class="search-input" id="search-input" placeholder="Search component...">
+                <select class="sort-select" id="sort-select">
+                    <option value="default">Default</option>
+                    <option value="price-asc">Price: Low → High</option>
+                    <option value="price-desc">Price: High → Low</option>
+                </select>
+            </div>
+            <div class="filter-buttons" id="filter-buttons"></div>
             <div class="modal-components" id="modal-components"></div>
             <button class="close-button" id="close-modal">Close</button>
         </div>
     </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
 
     <!-- FOOTER -->
     <footer id="footer">
